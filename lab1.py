@@ -7,7 +7,7 @@ from scipy.stats import norm as normal, expon
 import seaborn as sea
 
 mean = 90
-variance = 11
+std_dev = 11
 lambda_exp = 0.0111
 
 funcs = [statistics.mean,
@@ -21,7 +21,7 @@ funcs = [statistics.mean,
 
 def main():
     for size in [25, 60, 160, 300, 1000]:
-        norm = numpy.array(numpy.random.normal(loc=mean, scale=variance, size=size))
+        norm = numpy.array(numpy.random.normal(loc=mean, scale=std_dev, size=size))
         exp = numpy.array(numpy.random.exponential(scale=lambda_exp, size=size))
         print(f'\nSuze: {size}')
         print('\nNorm:')

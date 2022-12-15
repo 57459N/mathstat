@@ -1,7 +1,7 @@
 from typing import Optional
 import matplotlib.pyplot as plt
 import scipy.stats as stat
-from lab1 import mean, variance, lambda_exp
+from lab1 import mean, std_dev, lambda_exp
 from scipy.stats import chisquare
 import numpy as np
 
@@ -36,8 +36,8 @@ def main():
     freedom_degree = 20
 
     # Generating samples
-    norm_val3 = stat.norm.rvs(loc=mean, scale=variance, size=size3)
-    norm_val4 = stat.norm.rvs(loc=mean, scale=variance, size=size4)
+    norm_val3 = stat.norm.rvs(loc=mean, scale=std_dev, size=size3)
+    norm_val4 = stat.norm.rvs(loc=mean, scale=std_dev, size=size4)
 
     exp_val3 = stat.expon.rvs(loc=0, scale=lambda_exp, size=size3)
     exp_val4 = stat.expon.rvs(loc=0, scale=lambda_exp, size=size4)
